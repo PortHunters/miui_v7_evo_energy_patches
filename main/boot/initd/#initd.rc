@@ -1,4 +1,0 @@
-#Add init.d with ph-id by I1PABIJJA <i1pabijja@gmail.com>
-service sysinit /system/bin/logwrapper /system/xbin/busybox run-parts /system/etc/init.d
-    user root
-    oneshot
