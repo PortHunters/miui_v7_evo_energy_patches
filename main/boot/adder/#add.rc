@@ -5,6 +5,3 @@ service sysinit /system/bin/logwrapper /system/xbin/busybox run-parts /system/et
     user root
     oneshot
 #Some
-service custom_sn /system/bin/custom_sn
-    class main
-    oneshot
