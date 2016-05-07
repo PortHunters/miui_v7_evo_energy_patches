@@ -1,7 +1,10 @@
 on init
+    mkdir /dev/phi
 #Camera
+    mkdir /dev/phc
 #Init
 service sysinit /system/bin/logwrapper /system/xbin/busybox run-parts /system/etc/init.d
     user root
     oneshot
 #Some
+    mkdir /dev/pht
