@@ -1,1 +1,1 @@
-# miui_v7_evo_energy_1_patch_smali
+# miui_v7_evo_energy_patch_smali
