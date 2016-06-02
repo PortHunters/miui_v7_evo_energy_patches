@@ -1,0 +1,30 @@
+#Кастомная директория для работы (<boot>; <rom>; <custom=/путь до директории>):;
+<custom=/../>:;
+#Удаляет папку\файл:;
+delete::/path_to_file_or_dir:;
+#Копирует файл:;
+copyfile::/curent_path_to_file::/final_path_to_file:;
+#Копирует файлы из папки1 в папку2(с заменой):;
+copydir::/curent_path_to_dir::/final_path_to_dir:;
+#Перемещает папку:;
+movedir::/curent_path_to_dir::/final_path_to_dir:;
+#Заменяет текст в указанном файле:;
+replace::/path_to_file
+::search_string
+::replace_string
+:;
+#Добавляем текст в конец указанного файла:;
+append::/path_to_file
+::append_string
+:;
+#Заменяет текст в указанном файле1 из файла2:;
+replacefromfile::/path_to_file1
+::search_string
+::/path_to_file2
+:;
+#Добавляем текст в конец указанного файла1 из файла2:;
+append::/path_to_file1
+::/path_to_file2
+:;
+#Запускаем скрипт c аргументами и без:;
+runscript::/path_to_script::args1::args2::args3::argsn++:;
