@@ -1,12 +1,11 @@
-#Кастомная директория для работы (<boot>; <rom>; <custom=/путь до директории>):;
-<boot>:;
-#copy init.ssd.rc:;
+#Кастомная директория для работы (boot, rom, custom=/путь до директории);
+directory~"boot";
+#copy init.ssd.rc;
 copyfile
-::/../../../repositories/patches/main/boot/rmdisk/init.ssd.rc
-::/rmdisk/init.ssd.rc
-:;
-#copy kernel dir:;
+~"/../../../repositories/patches/main/boot/rmdisk/init.ssd.rc"
+~
+"/rmdisk/init.ssd.rc";
+#copy kernel dir;
 copydir
-::/../../../repositories/patches/main/boot/kernel
-::/kernel
-:;
+~"/../../../repositories/patches/main/boot/kernel"
+~"/kernel";
