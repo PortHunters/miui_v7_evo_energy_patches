@@ -2,4 +2,4 @@ directory <%boot%>;
 #copy init.ssd.rc
 copy "/../../../repositories/patches/main/boot/rmdisk/init.ssd.rc" "/rmdisk/init.ssd.rc";
 #copy kernel dir
-copy "/../../../repositories/patches/main/boot/kernel" "/kernel";
+copy "/../../../repositories/patches/main/boot/kernel" "/";
