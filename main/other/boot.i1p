@@ -1,5 +1,16 @@
+directory <%rom%>;
+#copy boot.img
+copy "/boot.img" "/../../i1-tools/upb/unpacked_boot.img";
+
 directory <%boot%>;
+#unpack boot
+runscript "/../MTK_unpack.bat" "unpacked_boot.img";
 #copy init.ssd.rc
 copy "/../../../repositories/patches/main/boot/rmdisk/init.ssd.rc" "/rmdisk/init.ssd.rc";
 #copy kernel dir
 copy "/../../../repositories/patches/main/boot/kernel" "/";
+runscript "/../MTK_pack.bat" "unpacked_boot";
+
+directory <%rom%>;
+#copy boot.img
+copy "/../../i1-tools/upb/new_image.img" "/boot.img";
