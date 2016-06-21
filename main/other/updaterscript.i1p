@@ -1,5 +1,4 @@
-directory <custom=%uarg:rom%>;
 #updater-script;
-replace "/META-INF/com/google/android/updater-script" "lcsh92_wet_jb9" "evo_energy";
-replace "/META-INF/com/google/android/updater-script" "mmcblk0p3" "mmcblk0p7";
-replace "/META-INF/com/google/android/updater-script" "mmcblk0p6" "mmcblk0p5";
+replace "%uarg:rom%/META-INF/com/google/android/updater-script" "lcsh92_wet_jb9" "evo_energy";
+replace "%uarg:rom%/META-INF/com/google/android/updater-script" "mmcblk0p3" "mmcblk0p7";
+replace "%uarg:rom%/META-INF/com/google/android/updater-script" "mmcblk0p6" "mmcblk0p5";
