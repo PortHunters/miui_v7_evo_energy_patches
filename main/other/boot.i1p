@@ -1,28 +1,23 @@
 #clean
-directory <custom=%uarg:boot%>;
-delete "/unpacked_boot";
-delete "/new_unpacked_boot.img";
-delete "/unpacked_boot.img";
+delete "%uarg:boot%/unpacked_boot";
+delete "%uarg:boot%/new_unpacked_boot.img";
+delete "%uarg:boot%/unpacked_boot.img";
 
-directory <custom=%uarg:rom%>;
 #copy boot.img
-copy "/boot.img" "/../../i1-tools/boot-tools/unpacked_boot.img";
+copy "%uarg:rom%/boot.img" "%uarg:boot%/unpacked_boot.img";
 
-directory <custom=%uarg:boot%>;
 #unpack boot
-runscript "/unpack.bat" "unpacked_boot.img";
+runscript "%uarg:boot%/unpack.bat" "unpacked_boot.img";
 #copy init.ssd.rc
-copy "/../../repositories/patches/main/boot/ramdisk/init.ssd.rc" "/unpacked_boot/ramdisk/init.ssd.rc";
+copy "%uarg:repo%/patches/main/boot/ramdisk/init.ssd.rc" "%uarg:boot%/unpacked_boot/ramdisk/init.ssd.rc";
 #copy kernel dir
-copy "/../../repositories/patches/main/boot/kernel" "/unpacked_boot/unpacked_boot.img-kernel";
-runscript "/repack.bat" "unpacked_boot";
+copy "%uarg:repo%/patches/main/boot/kernel" "%uarg:boot%/unpacked_boot/unpacked_boot.img-kernel";
+runscript "%uarg:boot%/repack.bat" "unpacked_boot";
 
-directory <custom=%uarg:rom%>;
 #copy boot.img
-copy "/../../i1-tools/boot-tools/new_unpacked_boot.img" "/boot.img";
+copy "%uarg:boot%/new_unpacked_boot.img" "%uarg:rom%/boot.img";
 
 #clean
-directory <custom=%uarg:boot%>;
-delete "/unpacked_boot";
-delete "/new_unpacked_boot.img";
-delete "/unpacked_boot.img";
+delete "%uarg:boot%/unpacked_boot";
+delete "%uarg:boot%/new_unpacked_boot.img";
+delete "%uarg:boot%/unpacked_boot.img";
